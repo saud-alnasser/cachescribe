@@ -37,7 +37,7 @@ jobs:
         with:
           title: 'chore: version package'
           commit: 'chore: version package'
-          version: node .github/changeset-version.js
+          version: node .github/changeset-version.cjs
           publish: pnpm publish --access public --provenance --no-git-checks
           createGithubReleases: true
 
