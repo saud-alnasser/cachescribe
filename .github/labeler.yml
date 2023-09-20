@@ -1,0 +1,28 @@
+# types
+
+'📚 type: documentation':
+  - any: ['**/*.md']
+  - any: ['**/*.mdx']
+
+'🔧 type: development tools':
+  - any: ['*.config.*']
+  - any: ['.*rc.*']
+  - any: ['.*rc']
+  - any: ['.*ignore']
+  - any: ['.*attributes']
+  - any: ['.husky/**/*']
+  - any: ['.changeset/config.json']
+  - any:
+      [
+        '.github/**/*',
+        '!.github/ISSUE_TEMPLATE/*',
+        '!.github/PULL_REQUEST_TEMPLATE.md',
+      ]
+
+# flags
+
+'🚀 flag: release':
+  - any: ['**/CHANGELOG.md']
+
+'📦 flag: dependencies':
+  - any: ['pnpm-lock.yaml']

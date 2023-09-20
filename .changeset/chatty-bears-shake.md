@@ -1,0 +1,5 @@
+---
+'cachescribe': major
+---
+
+v1 🎉

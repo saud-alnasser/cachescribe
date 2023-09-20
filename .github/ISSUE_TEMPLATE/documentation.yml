@@ -1,0 +1,28 @@
+# credits
+# https://github.com/trpc/trpc/blob/main/.github/ISSUE_TEMPLATE
+# https://github.com/t3-oss/create-t3-app/tree/next/.github/ISSUE_TEMPLATE
+
+name: 📚 Documentation
+description: request changes related to the documentation
+title: 'docs: '
+labels: ['📚 type: documentation', '📝 flag: triage']
+body:
+  - type: textarea
+    attributes:
+      label: Area of Improvement
+      placeholder: I would like to see more in-depth API documentation for how to use batch-links.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: Add any other information that may help us understand here.
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 👨‍👧‍👦 Contributing
+      description: Would you like to improve the documentation yourself?
+      options:
+        - label: 🙋‍♂️ Yes, I will create a pull request implementing the suggested changes!

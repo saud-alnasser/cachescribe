@@ -1,0 +1,30 @@
+XS:
+  name: '🦔 size: tiny'
+  lines: 0
+  color: 1D76DB
+S:
+  name: '🐇 size: small'
+  lines: 10
+  color: 0E8A16
+M:
+  name: '🐂 size: medium'
+  lines: 100
+  color: FBCA04
+L:
+  name: '🐘 size: large'
+  lines: 500
+  color: D93F0B
+XL:
+  name: '🐋 size: x-large'
+  lines: 1000
+  color: B60560
+  comment: |
+    # whoa! easy there, partner!
+    this pull request is too big. please break it up into smaller pull requests unless this is an exceptional case.
+XXL:
+  name: '🦑 size: xx-large'
+  lines: 5000
+  color: B60205
+  comment: |
+    # whoa! easy there, partner!
+    this pull request is too big. please break it up into smaller pull requests unless this is an exceptional case.
