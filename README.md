@@ -2,14 +2,7 @@
 
 a simple cache that can persist in the file system across different runs of your program. 
 
-## Key Features ✨
-
-- versatility caching: provides in-memory and persistent caching for improved data retrieval.
-- configuration flexibility: offers easy global and per-instance configuration settings.
-- automatic expiration: automatically clears expired entries to optimize memory usage.
-
-
-## Usage 🔧
+## Usage ✨
 
 ### Installation
 
