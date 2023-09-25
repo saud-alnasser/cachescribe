@@ -8,6 +8,6 @@ Closes <!-- #issues -->
 
 ## ✅ Checklist
 
-- [ ] I have followed every step in the [contributing guide](https://github.com/saud-alnasser/starlux/blob/main/CONTRIBUTING.md).
+- [ ] I have followed every step in the [contributing guide](https://github.com/saud-alnasser/cachescribe/blob/main/CONTRIBUTING.md).
 - [ ] If necessary, I have added or updated the tests related to the changes made.
 - [ ] If necessary, I have added documentation related to the changes made.
