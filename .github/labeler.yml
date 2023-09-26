@@ -4,7 +4,7 @@
   - any: ['**/*.md']
   - any: ['**/*.mdx']
 
-'🔧 type: development tools':
+'🔧 type: tools':
   - any: ['*.config.*']
   - any: ['.*rc.*']
   - any: ['.*rc']
