@@ -1,22 +1,19 @@
 # Contribution Guidelines
 
-when contributing to the package, before opening a new pull request, try searching through the [issue tracker][issue-tracker], if you want to make code changes based on your personal opinion(s), please make sure you [open an issue][open-issue] first describing the changes you want to make, and open a pull request only when your suggestions get approved by the maintainers.
+when contributing, try searching through the [issue tracker][issue-tracker] for issues to tackle, if you want to make code changes based on your personal opinion(s), in order to not wast your time please make sure you [open an issue][open-issue] first describing the changes you want to make, and only start making the implementation when your suggestions get approved by the maintainers.
 
 ## How to Contribute
 
-### Prerequisites
-
-in order to not waste your time implementing a change that has already been declined, or is generally not needed, start by
-checking if there's an existing issue related to the change you want to make if not [open an issue][open-issue] describing the problem you would like to solve.
+in this project we follow the [stacking workflow][stacking-learn], using graphite. if you're not familiar with the workflow, please read the [stacking][stacking-learn] overview first, then get familiar with [graphite][graphite-docs]. when making small changes i.e. bug fixes or small refactors no more than hundred lines of code you can follow the [github workflow][github-workflow] if you want.
 
 ### Setup your environment
 
-_Some commands will assume you have the Github CLI installed, if you haven't, consider [installing it][github-cli], but you can always use the Web UI if you prefer that instead._
+_some commands will assume you have the Github CLI installed, if you haven't, consider [installing it][github-cli], but you can always use the Web UI if you prefer that instead._
 
 in order to contribute to this project, you will need to fork the repository:
 
 ```bash
-gh repo fork saud-alnasser/cachescribe
+gh repo fork saud-alnasser/cachscribe
 ```
 
 then, clone it to your local machine:
@@ -37,26 +34,81 @@ then, install the project's dependencies:
 pnpm install
 ```
 
-### Implement your changes
+if you are going to use the [stacking workflow][stacking-learn] make sure you setup [graphite][graphite-docs], 
+ensure that you use `graphite/` as a prefix for branch names also use dashes (`-`) instead of underscores (`_`).
 
-when making commits, make sure to follow the [conventional commit][conventional-commits] guidelines, i.e. prepending the message with `feat:`, `fix:`, `chore:`, `docs:`, etc... You can use `git status` to double check which files have not yet been staged for commit:
+### Stacking Workflow with Graphite
+
+#### Implement your changes
+
+sync your local repository with the upstream repository:
 
 ```bash
-git add <file> && git commit -m 'feat/fix/chore/docs: commit message'
+gt sync
 ```
 
-### When you're done
+choice the stack to start off, either the trunk (main) or other stacks:
+
+_here we will use the trunk branch_
+
+```bash
+gt trunk
+```
+
+make the changes you want, and then check that your code follows the project's style guidelines and that all tests are passing by running:
+
+```bash
+pnpm check
+```
+
+if your change should appear in the changelog, it must be captured by `changeset` which is done by running:
+
+> **note**: consider using the `<br>` tag at the top when the changes summary span over multiple lines.
+
+```bash
+pnpm changeset
+```
+
+then create stack and submit it, make sure to follow the [conventional commit][conventional-commits] guidelines:
+
+```bash
+gt c -am '(feat/fix/chore/docs): <commit-message>' && gt ss
+```
+
+### GitHub Workflow
+
+#### Implement your changes
 
 pull changes to the main branch
 
 ```bash
-git checkout main && git pull 
+git checkout main && git pull
+```
+
+create a new branch for your changes:
+
+```bash
+git checkout main && git switch -C <dev-branch>
+```
+
+when making commits, make sure to follow the [conventional commit][conventional-commits] guidelines.
+
+```bash
+git add <file> && git commit -m '(feat/fix/chore/docs): <commit-message>'
+```
+
+#### When you're done
+
+pull changes to the main branch
+
+```bash
+git checkout main && git pull
 ```
 
 merge changes into your dev branch and resolve conflicts
 
 ```bash
-git checkout <dev-branch> && git merge main -m 'feat: merge `main` into `<dev-branch>`'
+git checkout <dev-branch> && git merge main -m 'chore: merge `main` into `<dev-branch>`'
 ```
 
 check that your code follows the project's style guidelines and that all tests are passing by running:
@@ -89,10 +141,13 @@ when all that's done, it's time to file a pull request to upstream:
 gh pr create --web
 ```
 
-and fill out the title and body appropriately. again, make sure to follow the [conventional commit][conventional-commits] guidelines for your title.
+and fill out the title and body appropriately. again, make sure to follow the [conventional commit][conventional-commits] guidelines for your pr title.
 
 [issue-tracker]: https://github.com/saud-alnasser/cachescribe/issues
 [open-issue]: https://github.com/saud-alnasser/cachescribe/issues/new/choose
 [github-cli]: (https://github.com/cli/cli#installation)
 [conventional-commits]: https://www.conventionalcommits.org/en/v1.0.0/
+[github-workflow]: https://docs.github.com/en/get-started/quickstart/github-flow
+[graphite-docs]: https://graphite.dev/docs/
+[stacking-learn]: https://stacking.dev
 [pnpm]: https://pnpm.io
