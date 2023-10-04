@@ -39,7 +39,7 @@ jobs:
         with:
           title: 'chore: version package'
           commit: 'chore: version package [skip ci]'
-          version: node .github/changeset-version.js
+          version: node .github/changeset-version.cjs
           publish: pnpm exec changeset publish
 
         env:
