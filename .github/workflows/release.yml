@@ -38,10 +38,9 @@ jobs:
         uses: changesets/action@v1
         with:
           title: 'chore: version package'
-          commit: 'chore: version package'
-          version: node .github/changeset-version.cjs
+          commit: 'chore: version package [skip ci]'
+          version: node .github/changeset-version.js
           publish: pnpm exec changeset publish
-          createGithubReleases: true
 
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

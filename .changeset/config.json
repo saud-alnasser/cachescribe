@@ -4,6 +4,10 @@
     "@changesets/changelog-github",
     { "repo": "saud-alnasser/cachescribe" }
   ],
+  "privatePackages": {
+    "version": true,
+    "tag": true
+  },
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
