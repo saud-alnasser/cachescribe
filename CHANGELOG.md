@@ -1,5 +1,11 @@
 # cachescribe
 
+## 1.0.2
+
+### Patch Changes
+
+- [#28](https://github.com/saud-alnasser/cachescribe/pull/28) [`0c8120f`](https://github.com/saud-alnasser/cachescribe/commit/0c8120f582568353ba0c972805d8b5695a824120) Thanks [@renovate](https://github.com/apps/renovate)! - updated dependency superjson to v2
+
 ## 1.0.1
 
 ### Patch Changes
