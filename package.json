@@ -51,7 +51,7 @@
   "dependencies": {
     "fs-extra": "^11.1.1",
     "slash": "^5.1.0",
-    "superjson": "^1.13.1",
+    "superjson": "^2.0.0",
     "zod": "^3.22.2"
   },
   "engines": {
