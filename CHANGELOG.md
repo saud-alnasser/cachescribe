@@ -1,5 +1,11 @@
 # cachescribe
 
+## 2.0.0
+
+### Major Changes
+
+- [#36](https://github.com/saud-alnasser/cachescribe/pull/36) [`d3eb601`](https://github.com/saud-alnasser/cachescribe/commit/d3eb6014494576da0e213facc8a572c78b83aba8) Thanks [@renovate](https://github.com/apps/renovate)! - updated dependency node to v20
+
 ## 1.0.2
 
 ### Patch Changes
