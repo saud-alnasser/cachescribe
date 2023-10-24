@@ -1,6 +1,6 @@
 {
   "name": "cachescribe",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "a simple cache that can persist in the file system across different runs of your program.",
   "author": "saud-alnasser",
   "license": "Apache-2.0",
