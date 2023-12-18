@@ -1,5 +1,11 @@
 # cachescribe
 
+## 2.0.1
+
+### Patch Changes
+
+- [`de42cc9`](https://github.com/saud-alnasser/cachescribe/commit/de42cc98e411e090e650c9591c585578e9d5218a) Thanks [@saud-alnasser](https://github.com/saud-alnasser)! - updated dependencies
+
 ## 2.0.0
 
 ### Major Changes
