@@ -1,19 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", "schedule:monthly", ":pinDevDependencies"],
-  "updateInternalDeps": true,
-  "packageRules": [
-    {
-      "groupName": "all non-major dev dependencies",
-      "groupSlug": "all-dev-minor-patch",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch", "minor"]
-    },
-    {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch", "minor"]
-    }
-  ]
+  "extends": [
+    "config:recommended",
+    "schedule:weekly",
+    "group:allNonMajor",
+    ":pinDevDependencies"
+  ],
+  "updateInternalDeps": true
 }
