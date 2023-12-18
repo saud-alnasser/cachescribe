@@ -1,5 +1,0 @@
----
-"cachescribe": patch
----
-
-updated dependencies
