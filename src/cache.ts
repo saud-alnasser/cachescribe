@@ -1,9 +1,9 @@
-import superjson from 'superjson';
-import slash from 'slash';
 import fs from 'fs-extra';
-import { hash, hashAlgorithms } from './hash';
 import { join } from 'node:path';
+import slash from 'slash';
+import superjson from 'superjson';
 import { z } from 'zod';
+import { hash, hashAlgorithms } from './hash';
 
 const CacheOptionsSchema = z.object({
   /**
@@ -14,14 +14,14 @@ const CacheOptionsSchema = z.object({
    * @default
    * 'default'
    */
-  namespace: z.string().nonempty().optional(),
+  namespace: z.string().min(1).optional(),
 
   /**
    * directory that the snapshot file will be written in.
    *
    * @default node_modules/.cache/cachescribe
    */
-  directory: z.string().nonempty().optional(),
+  directory: z.string().min(1).optional(),
 
   /**
    * file extension to be used for the cache snapshot file.
@@ -98,7 +98,7 @@ const CacheEntrySchema = z.object({
     /**
      * key of the entry.
      */
-    key: z.string().nonempty(),
+    key: z.string().min(1),
 
     /**
      * duration in seconds for the time to live for the entry.
@@ -129,7 +129,7 @@ const CacheSnapshotSchema = z.object({
     /**
      * id of the snapshot file.
      */
-    id: z.string().nonempty(),
+    id: z.string().min(1),
   }),
 
   /**
@@ -145,7 +145,10 @@ const CacheEntryParamsSchema = z
     entries: z
       .array(
         z
-          .object({ key: z.string().nonempty(), value: z.unknown() })
+          .object({
+            key: z.string().min(1),
+            value: z.unknown(),
+          })
           .merge(CacheOptionsSchema.pick({ ttl: true }))
       )
       .nonempty()
