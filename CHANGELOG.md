@@ -1,5 +1,11 @@
 # cachescribe
 
+## 2.0.2
+
+### Patch Changes
+
+- [#69](https://github.com/saud-alnasser/cachescribe/pull/69) [`b989033`](https://github.com/saud-alnasser/cachescribe/commit/b989033f245b499dee7089cb165aa2c7789ec403) Thanks [@saud-alnasser](https://github.com/saud-alnasser)! - resolved usage of zod deprecated functions.
+
 ## 2.0.1
 
 ### Patch Changes
